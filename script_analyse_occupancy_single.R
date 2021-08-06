@@ -3,6 +3,7 @@
 ##############################################################
 library(here)
 library(unmarked)
+library(boot)
 data<-read.table("data_2021.txt",h=T) # lecture du fichier format long
 head(data) #pour voir à quoi ça ressemble
 str(data) #regarder la classe des colonnes, et dans quelle colonne se trouvent les données
@@ -64,11 +65,6 @@ occ1<-backTransform(m0,'state') #occupation
 occ1
 confint(occ1)
 
-#on peut aussi faire avec la fonction inv.logit du package boot, seulement pour le modèle occupancy. 
-#library(boot)
-#occ=inv.logit(coef(m0))[[1]]
-#det=inv.logit(coef(m0))[[2]]
-
 ###################################
 
 #modele avec les variables d'occupation et de détection
@@ -78,13 +74,8 @@ summary(m1)
 
 #transformation des valeurs 
 
-det1<-backTransform(m1,'det') #détection
-det1
-confint(det1)
-
-occ1<-backTransform(m1,'state') #occupation
-occ1
-confint(occ1)
+occ=inv.logit(coef(m0))[[1]] #fonction inv.logit du package “boot”
+det=inv.logit(coef(m0))[[2]]
 
 ######################################
 

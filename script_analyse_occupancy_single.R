@@ -74,8 +74,8 @@ summary(m1)
 
 #transformation des valeurs 
 
-occ=inv.logit(coef(m0))[[1]] #fonction inv.logit du package “boot”
-det=inv.logit(coef(m0))[[2]]
+occ=inv.logit(coef(m1))[[1]] #fonction inv.logit du package “boot”
+det=inv.logit(coef(m1))[[2]]
 
 ######################################
 

@@ -1,6 +1,6 @@
 ###################################################################################
 #Préparation des grilles SIG pour le protocole de suivi du Sonneur à ventre jaune
-#Script rédigé par Jean-Pierre Vacher
+#Script rédigé par Jean-Pierre Vacher - première version 2021.
 #Mise à jour 7 février 2022
 ###################################################################################
 

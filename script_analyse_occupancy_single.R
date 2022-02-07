@@ -65,7 +65,10 @@ occ1<-backTransform(m0,'state') #occupation
 occ1
 confint(occ1)
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8644646bc3525c934f1a7f30629b4febec184ae1
 ###################################
 
 #modele avec les variables d'occupation et de détection
@@ -75,8 +78,13 @@ summary(m1)
 
 #transformation des valeurs 
 
+<<<<<<< HEAD
 occ=inv.logit(coef(m0))[[1]]
 det=inv.logit(coef(m0))[[2]]
+=======
+occ=inv.logit(coef(m1))[[1]] #fonction inv.logit du package “boot”
+det=inv.logit(coef(m1))[[2]]
+>>>>>>> 8644646bc3525c934f1a7f30629b4febec184ae1
 
 ######################################
 
